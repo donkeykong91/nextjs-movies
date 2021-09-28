@@ -34,6 +34,7 @@
     "next-env": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "swr": "^1.0.1",
     "theme-ui": "^0.11.3"
   },
   "devDependencies": {
