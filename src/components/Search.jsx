@@ -1,5 +1,8 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import {Button, Flex, Grid, Input, jsx} from "theme-ui";
 
 // console.log('*****MOVIE_SEARCH_URL*****: ', MOVIE_SEARCH_URL);
 const Search = () => {
@@ -8,7 +11,6 @@ const Search = () => {
 
     return (
         <div>
-            Search Page!
             <form
                 onSubmit={async (e) => {
                     e.preventDefault();
@@ -16,14 +18,18 @@ const Search = () => {
                     // await searchMovie(movie);
                 }}
             >
-                Movie
-                <input
-                    id="movie"
-                    onChange={(e) => {setMovie(e.target.value)}}
-                    value={movie}
-                    placeholder='Begin Your Movie Search!'
-                />
-                <button>Find It!</button>
+                <Grid columns={['3fr 1fr']}>
+                    <Input
+                        id="movie"
+                        onChange={(e) => {setMovie(e.target.value)}}
+                        value={movie}
+                        placeholder='Begin Your Movie Search!'
+                        autofillBackgroundColor="highlight"
+                    >
+                    </Input>
+                <Button>Find It!</Button>
+                {/*<button>Find It!</button>*/}
+                </Grid>
             </form>
         </div>
     );
